@@ -29,5 +29,36 @@ img {
   max-width: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
 
+section:last-child {
+  margin-top: 4em;
+}
+
+.grid-1 div,
+.grid-2 div {
+  padding: 3em 0;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.grid-1 #item-to-span {
+  grid-column: 1 / 4;
+}
+
+@media (min-width: 400px){
+  .grid-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .grid-1 #item-to-span {
+    grid-column: 1 / 2;
+  }
+}
 
